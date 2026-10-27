@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a102b">
+<title>Priyanka's Little Moonlight World 🌙</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+:root{--bg:#090f2b;--pink:#ffc4df;--lav:#d3c4ff;--gold:#ffe9ae;--white:#fff8ff;--glass:rgba(20,25,62,.78);--line:#f5dfff2c}
+*{box-sizing:border-box}html{scroll-behavior:smooth;width:100%;overflow-x:clip}body{margin:0;width:100%;min-width:0;min-height:100vh;min-height:100dvh;overflow-x:clip;color:var(--white);font-family:Nunito,system-ui,sans-serif;background:radial-gradient(ellipse at 70% 12%,#302957 0%,transparent 40%),linear-gradient(180deg,#080e27,#19183d 65%,#28204b)}
+button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+#sky{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.scene{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.moon{position:absolute;right:12%;top:8%;width:78px;height:78px;border-radius:50%;background:#fff0b8;box-shadow:0 0 28px #fff0b866,0 0 90px #dfc9ff33;animation:glow 5s ease-in-out infinite}
+.moon:after{content:"";position:absolute;left:24px;top:-7px;width:72px;height:72px;border-radius:50%;background:#111432}
+.cloud{position:absolute;width:180px;height:38px;border-radius:50px;background:#c5c9ff13;filter:blur(1px);animation:drift 38s linear infinite}.cloud:before,.cloud:after{content:"";position:absolute;border-radius:50%;background:inherit;top:-24px;left:25px;width:68px;height:60px}.cloud:after{left:80px;top:-14px;width:78px;height:48px}.c1{top:30%;left:-200px}.c2{top:60%;right:-220px;animation-delay:-19s}
+.hills{position:absolute;bottom:0;width:100%;height:24%;background:#191b40;clip-path:polygon(0 62%,13% 32%,23% 67%,38% 21%,52% 66%,68% 30%,81% 66%,92% 40%,100% 58%,100% 100%,0 100%);opacity:.92}
+.lake{position:absolute;bottom:0;height:11%;width:100%;background:linear-gradient(#858bd71a,#7a91dc24);border-top:1px solid #fff2}.lake:after{content:"";position:absolute;left:39%;top:16px;width:23%;height:2px;background:#fff1c966;box-shadow:0 12px 30px #ffe4a633}
+.decor{position:absolute;bottom:7%;font-size:24px;filter:drop-shadow(0 0 12px #ffc6e755);animation:bob 4s ease-in-out infinite}.d1{left:8%}.d2{right:9%;animation-delay:-2s}.d3{left:23%;bottom:3%;animation-delay:-1s}.d4{right:25%;bottom:4%;animation-delay:-3s}
+header,.wrap,footer{position:relative;z-index:2}header{max-width:1100px;margin:auto;padding:16px clamp(12px,4vw,32px);display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{font-size:.76rem;letter-spacing:.09em;color:#e9ddff;border:1px solid var(--line);background:#fff1;border-radius:99px;padding:9px 13px}.music{border:1px solid #f9d6ff38;color:white;background:#ffffff10;border-radius:99px;padding:10px 14px;font-weight:800;white-space:nowrap}
+.wrap{width:min(880px,calc(100% - 24px));min-height:calc(100vh - 120px);min-height:calc(100dvh - 120px);margin:auto;display:flex;align-items:center;justify-content:center;padding:15px 0 32px;min-width:0}.page{width:100%;max-width:100%;min-width:0;overflow-wrap:anywhere;border:1px solid var(--line);border-radius:30px;background:var(--glass);padding:clamp(22px,5vw,46px);box-shadow:0 24px 85px #03051866,inset 0 1px #ffffff12;backdrop-filter:blur(17px);-webkit-backdrop-filter:blur(17px);animation:enter .6s ease both}.page[hidden]{display:none}.center{text-align:center}.eyebrow{display:inline-block;border:1px solid #ffbfdf38;background:#ffb8da10;border-radius:99px;padding:7px 13px;color:var(--pink);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}
+h1,h2,h3{font-family:Quicksand,Nunito,sans-serif;line-height:1.22;color:#fff7ff;margin:14px 0}h1{font-size:clamp(2rem,6.5vw,3.5rem);letter-spacing:-.04em;text-shadow:0 0 30px #f7bce24a}h2{font-size:clamp(1.65rem,4.5vw,2.5rem)}h3{font-size:1.1rem}p{font-size:clamp(1rem,2.3vw,1.1rem);line-height:1.85;color:#eae5fc;margin:12px 0}.lead{max-width:700px;margin:12px auto}.gold{color:var(--gold)}.pink{color:var(--pink)}.moonicon{font-size:4.3rem;margin:0 auto 14px;filter:drop-shadow(0 0 20px #ffe8a566);animation:bob 4s ease-in-out infinite}.actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap;margin-top:25px}.btn{min-height:48px;border:1px solid #ffffff2d;border-radius:99px;padding:12px 21px;color:white;background:linear-gradient(110deg,#7f65d9,#b35da9 70%,#d57eb0);box-shadow:0 10px 28px #8d5cd52b;font-weight:800;transition:transform .2s,filter .2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.btn.alt{background:#ffffff0b;box-shadow:none;border-color:#e2cfff40}.btn:active{transform:scale(.97)}
+.chapter{font-size:.8rem;color:#d9caff;letter-spacing:.08em;text-align:center;margin-bottom:18px}.letter{max-width:690px;margin:auto}.letter p{margin:17px 0}.letter p:first-child:first-letter{color:var(--pink)}.pullquote{font-family:Quicksand,sans-serif;font-size:clamp(1.2rem,3.2vw,1.65rem);line-height:1.65;color:#ffe8b0;text-align:center;padding:18px 12px;margin:20px 0;border-top:1px solid #ffe9ae26;border-bottom:1px solid #ffe9ae26}
+.sceneart{font-size:clamp(2rem,7vw,3.8rem);letter-spacing:.13em;margin:17px 0;filter:drop-shadow(0 0 16px #f8d3ff40);animation:bob 5s ease-in-out infinite}
+.game-menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0}.game-choice{border:1px solid #f5d7ff32;border-radius:20px;padding:17px 14px;background:linear-gradient(140deg,#ffffff0d,#f4c9ff08);color:white;text-align:left;min-height:112px;transition:.2s}.game-choice:hover{transform:translateY(-3px);background:#ffffff13}.game-choice .emoji{font-size:1.8rem}.game-choice strong{display:block;margin:7px 0 4px;font-size:1rem}.game-choice small{color:#d3ccef;line-height:1.5}
+.play-area{margin-top:17px;padding:20px;border:1px solid #ffc9e23a;border-radius:22px;background:#080d2877;text-align:center;min-height:125px}.play-area p{margin:8px 0}.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-width:390px;margin:14px auto}.tile{min-height:57px;border:1px solid #e8d8ff3b;border-radius:13px;background:#b4a0ff18;color:white;font-size:1.45rem}.tile:disabled{opacity:.65;cursor:default}.tile.matched{background:#83d8c31c;border-color:#a4f2d13c}.tile.selected{background:#ffc4df2a;border-color:#ffc4df99}
+.quizopts,.riddleopts{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:13px 0}.opt{border:1px solid #e8d8ff3b;background:#ffffff0b;color:white;border-radius:13px;padding:10px 14px}.opt:hover{background:#ffffff1c}.sequence{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:14px}.sequence button{font-size:1.5rem;width:53px;height:53px;border:1px solid #fff3;border-radius:13px;background:#c5b7ff17;color:white}.memory-says{color:var(--gold);font-weight:800;min-height:24px}
+footer{text-align:center;padding:0 12px 20px;color:#c6c0e2;font-size:.8rem}#toast{position:fixed;z-index:9;left:50%;bottom:20px;transform:translate(-50%,15px);opacity:0;pointer-events:none;background:#211d49;border:1px solid #fff4;border-radius:99px;padding:10px 16px;transition:.25s;color:white;max-width:90%;text-align:center}#toast.show{opacity:1;transform:translate(-50%,0)}
+.shooting{position:fixed;z-index:1;right:-70px;top:18%;width:100px;height:2px;background:linear-gradient(90deg,transparent,#fff3bd);box-shadow:0 0 8px #fff2bd;transform:rotate(-28deg);animation:shoot 9s linear infinite;pointer-events:none}
+@keyframes enter{from{opacity:0;transform:translateY(12px) scale(.99)}to{opacity:1;transform:none}}@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}@keyframes glow{0%,100%{box-shadow:0 0 28px #fff0b866,0 0 90px #dfc9ff33}50%{box-shadow:0 0 42px #fff0b8aa,0 0 110px #dfc9ff55}}@keyframes drift{from{transform:translateX(0)}to{transform:translateX(calc(100vw + 260px))}}@keyframes shoot{0%{transform:translate(0,0) rotate(-28deg);opacity:0}8%{opacity:.9}35%{transform:translate(-290px,180px) rotate(-28deg);opacity:0}100%{opacity:0}}
+@media(max-width:600px){header{width:100%;padding:12px max(10px,env(safe-area-inset-left));align-items:flex-start;flex-wrap:wrap}.brand{overflow-wrap:anywhere}.wrap{align-items:flex-start;min-height:calc(100dvh - 90px);padding:8px 0 22px}.page{padding:clamp(16px,4vw,21px) clamp(11px,3.6vw,15px);border-radius:20px}.letter{min-width:0}.play-area{min-width:0;overflow:hidden}.game-menu{width:100%;min-width:0}.brand{font-size:.61rem;padding:8px 9px;max-width:100%;line-height:1.35}.wrap{width:calc(100% - 14px);min-height:calc(100vh - 105px);padding-top:8px}.page{padding:21px 15px;border-radius:22px}.game-menu{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.game-choice{min-height:116px;padding:13px 10px}.game-choice .emoji{font-size:1.65rem}.game-choice strong{font-size:.91rem;line-height:1.25}.game-choice small{font-size:.75rem;line-height:1.4}.moon{width:58px;height:58px;right:7%;top:12%}.moon:after{width:55px;height:55px;left:17px;top:-6px}.actions .btn{width:100%;max-width:340px}.tiles{gap:6px;width:100%;max-width:100%}.tile{min-width:0;min-height:clamp(44px,12vw,50px);font-size:clamp(1.1rem,5vw,1.45rem);padding:4px}.play-area{padding:15px 10px}.sequence button{width:clamp(40px,12vw,48px);height:clamp(40px,12vw,48px)}.actions{gap:8px}.btn{max-width:100%;white-space:normal}h1{font-size:clamp(1.8rem,9vw,2.5rem)}p{line-height:1.7}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="scene" aria-hidden="true"><div class="moon"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="hills"></div><div class="lake"></div><span class="decor d1">🏮</span><span class="decor d2">🏮</span><span class="decor d3">🌷</span><span class="decor d4">🌸</span></div>
+<div class="shooting" aria-hidden="true"></div>
+<header><div class="brand">✦ A LITTLE WORLD, JUST FOR PRIYANKA ✦</div><button class="music" id="musicBtn" type="button" onclick="toggleMusic()">▶️ Music chalao 💗</button></header>
+<audio id="bgAudio" src="Tere%20Paas%20Main.mp3" autoplay loop preload="auto" playsinline></audio>
+<main class="wrap">
+<section class="page center" id="page-1">
+<div class="moonicon" aria-hidden="true">🌙</div><span class="eyebrow">Ek chhoti si duniya, sirf tere liye</span>
+<h1>Hey, Mera Pyara Bachaa... ❤️</h1>
+<p class="lead">Oyeee mera Puchku Donnn 😭😂💗👑! Tere liye ek chhoti si magical duniya banayi hai—ismein pyaar se bhari baatein bhi hain, thodi nautanki 🤡, thodi pagalpanti 🐒, cute surprises 🎁 aur games bhi! Bas madam ji aaram se dekhna, zyada attitude dikhaya na toh Kandali ke khet mein race lagwa dunga 😂🌿🏃‍♀️🏃‍♂️</p>
+<p class="lead">Aaj bas thoda sa relax kar, meri bachchi 🥹🫶🌷. Tere periods chal rahe hain aur tu achha feel nahi kar rahi, toh aaj superhero banne ki duty cancel 😤🦸‍♀️—paani pee, aaram kar, aur jo mann kare woh kar. Ye website teri smile ke liye hai; aur haan, boring lagi toh complaint department mein main khud present hoon 😂💌🌙</p>
+<div class="actions"><button class="btn" onclick="go(2)">Andar chalein, Bachaa? ✨ →</button></div>
+</section>
+<section class="page" id="page-2" hidden>
+<div class="chapter">01 / DIL SE KUCH BAATEIN 💌</div><div class="center"><span class="eyebrow">Ek baat dil se, meri Puchku 💗</span><h2>Priyanka, ek baat sun na... 💗</h2></div>
+<div class="letter">
+<p>Meri Puchku Don 😭💗👑, kabhi-kabhi na din bilkul bakwaas hota hai—body bhi tang karti hai, mood bhi bina permission ke up-down hota rehta hai 😵‍💫🌧️. Aur aise din mein tujhe zabardasti smile karne ki zaroorat bilkul nahi. Tu gussa ho, chup reh, complain kar, ya bas “uff yaar” bolke let ja 😂🛌—sab allowed hai, madam ji. Tujhe har waqt strong dikhne ka audition nahi dena. 🫶🌷</p>
+<p>Teri feelings sach mein matter karti hain, bachcheee 🥹💞. Tujhe baat karni ho toh main sununga; chup rehna ho toh bhi koi pressure nahi. Tujhe advice chahiye toh bolna, aur sirf kisi ko apni bakwaas sunani ho toh woh bhi bol dena 😂🤝. Har problem ka solution mere paas nahi hoga, par main tujhe judge karne nahi baithunga. Tu apni pace se chalna, okay? 🌙🦋</p>
+<p>Aur sun meri chhoti si nautanki 😭😂💗—aaj productivity ke naam pe bas bed se uthke paani peena bhi achievement maan lenge 🏆🥤. Kuch kha lena, garam paani ya jo tujhe comfort de woh le lena, favourite gaana chala lena 🎧🌸, aur rest karna. Apna khayal rakhna zaroori hai, samjhi Don Sahiba? 😤👑💖</p>
+<div class="pullquote">“Meri Puchku Don, tu akeli nahi hai 🫶💗. Ek-ek step, apni pace par… aur beech mein thodi bakchodi zaroori hai 😂🌷”</div>
+<p>Ek baat dil se: main chahta hoon ki jab bhi tujhe lage ki sab kuch ek saath ho raha hai, tu yaad kare ki tere paas apne log hain aur tu help maang sakti hai. Main bhi apni taraf se tere saath khada rahunga, meri bachchi ❤️🫂. Tu akeli nahi hai, aur tujhe sab kuch aaj hi theek karna bhi nahi hai. Abhi bas aaram, thoda sa sukoon aur meri taraf se ek virtual jhappi 🤗💗</p>
+<p>Aur sun, ek din hum dono saath mein Kandali ke khet mein kudenge, theek hai naaa? 😭😂🌿🏃‍♀️💨 Tu bolegi “chal na pagal,” aur main bolunga “pehle tu ja Puchku Don!” 🤣🤣 Phir dono ki haalat kharab, aur baad mein isi baat pe hasenge. Ye plan abhi se officially approved hai—stamp laga diya 🫡💗🌷</p>
+</div>
+<div class="actions"><button class="btn alt" onclick="go(1)">← Wapas</button><button class="btn" onclick="go(3)">Thodi aur baatein? 🌙 →</button></div>
+</section>
+<section class="page" id="page-3" hidden>
+<div class="chapter">02 / EK SOFT SA PAUSE 🌌</div><div class="center"><span class="eyebrow">Chaand ki chhaon mein</span><h2>Abhi ke liye, bas itna hi kaafi hai 🌙</h2><div class="sceneart">☾ ✦ 🦋 ✧</div></div>
+<div class="letter">
+<p>Imagine kar meri Puchku 🌙🦋—raat shaant hai, chaand chamak raha hai, background mein apna gaana 🎧💗, aur hum dono duniya ki sabse faltu baaton pe has rahe hain 😂. Koi tension nahi, koi jaldi nahi. Bas thoda sukoon, thodi masti aur ekdum zero judgement zone 🫶✨</p>
+<p>Kabhi-kabhi hum future ki itni fikr karte hain ki present ke chhote achhe moments miss ho jaate hain. Har answer abhi milna zaroori nahi. Har decision aaj hi lena zaroori nahi. Thoda rukna, sochna aur apne mann ko time dena bhi bilkul okay hai.</p>
+<p>Agar aaj ka din achha tha, toh uski little happiness sambhaal ke rakh. Agar mushkil tha, toh khud ko blame mat karna. Kal ek naya din ho sakta hai—aur usmein koi achhi si baat, ek funny moment, ek achha song ya ek unexpected smile mil sakti hai.</p>
+<p class="gold">Ab ek chhoti si saans le, shoulders relax kar, aur yaad rakh: tujhe sab kuch ek hi baar mein figure out nahi karna. 🫶</p>
+</div>
+<div class="actions"><button class="btn alt" onclick="go(2)">← Wapas</button><button class="btn" onclick="go(4)">Chal, thodi masti karein 🎮 →</button></div>
+</section>
+<section class="page" id="page-4" hidden>
+<div class="chapter">03 / YOUR LITTLE PLAYGROUND 🎮</div><div class="center"><span class="eyebrow">Sirf masti aur pyaar 😂💗</span><h2>Games World, Mera Puchku Don! 🧸💗</h2><p class="lead">Ab aa gaya asli test, Puchku Don 😤😂🎮! Chhe games hain—memory 🧠, puzzle 🧩, speed challenge ⚡ aur hamare Kandali ke khet ki legendary adventure 🌿😭. Har game phone par tap karke khel sakti hai. Haar gayi toh koi baat nahi… bas bahane mat banana 🤣💗</p></div>
+<div class="game-menu">
+<button class="game-choice" onclick="playGame('memory')"><span class="emoji">🧠</span><strong>1. Memory Match</strong><small>Cute pairs dhoondo 🦋</small></button>
+<button class="game-choice" onclick="playGame('puzzle')"><span class="emoji">🧩</span><strong>2. Number Puzzle</strong><small>Tiles ko order mein lagao!</small></button>
+<button class="game-choice" onclick="playGame('tictactoe')"><span class="emoji">⭕</span><strong>3. Puchku vs Don</strong><small>Tic-tac-toe! Mujhe hara ke dikha 😤</small></button>
+<button class="game-choice" onclick="playGame('cloudpop')"><span class="emoji">☁️</span><strong>4. Cloud Pop</strong><small>20 seconds mein clouds tap karo ⚡</small></button>
+<button class="game-choice" onclick="playGame('rps')"><span class="emoji">✊</span><strong>5. Rock Paper Scissors</strong><small>Best of 5—full takkar 😂</small></button>
+<button class="game-choice" onclick="playGame('kandali')"><span class="emoji">🌿</span><strong>6. Kandali Khet Mission</strong><small>Funny adventure choose kar 😭🤣</small></button>
+</div>
+<div class="play-area" id="playArea" aria-live="polite"><p>☁️ <strong>Choose a game above</strong></p><p>Jo mann kare, usse start kar. Yahan tera game appear hoga.</p></div>
+<div class="actions"><button class="btn alt" onclick="go(3)">← Moonlight page</button><button class="btn" onclick="go(5)">Ek last letter 💌 →</button></div>
+</section>
+<section class="page center" id="page-5" hidden>
+<div class="moonicon" aria-hidden="true">💗</div><span class="eyebrow">Ek aakhri little note</span><h2>For You, Mera Pyara Bachaa 🌙</h2>
+<div class="letter">
+<p>Meri Puchku Don 😭💗👑, ye website banate waqt bas yahi socha ki tu thodi si smile kare, thoda sa hase aur tujhe feel ho ki koi tere liye effort kar sakta hai. Ismein thodi moonlight 🌙, thoda music 🎧, bahut saare emojis 🦋🌷💖 aur meri taraf se unlimited nautanki 😂🤡 hai. Haan, design mein galti mile toh developer ko gaali mat dena—developer main hi hoon 😭🤣</p>
+<p>Tu apne dreams ko time dena, apni favourite cheezon ke liye jagah banana aur jab thak jaaye toh rest lena, meri bachchi 🫶🌷. Teri life mein sirf tough days nahi—silly jokes 😂, favourite songs 🎧, random late-night bakwaas 🌙 aur woh Kandali ke khet wala legendary mission 🌿🏃‍♀️ bhi aana chahiye! Aur haan, tu jab bhi low feel kare, yaad rakhna ki tujhe sab kuch akele carry nahi karna. ❤️</p>
+<p>Har din ek jaisa nahi hoga, meri Puchku Don 🥹💞. Kabhi mood off, kabhi full pagalpan mode ON 🤡⚡—dono versions accepted hain 😂. Aur meri taraf se ek baat yaad rakh: main apni taraf se tere saath khada rahunga, jitna mujhse ho sake. Tu akeli nahi hai, bachche. Jab baat karni ho toh bolna, jab space chahiye ho toh woh bhi theek hai. 🫂🌷</p>
+<div class="pullquote">“Mera bachcha, tu akeli nahi hai 🫶💗. Teri smile bonus hai, teri feelings bhi utni hi important hain. Aur Kandali ke khet ka plan pending hai 😂🌿🏃‍♀️”</div>
+<p>Ab jaa meri Puchku Don 😂👑💗—paani pee, kuch tasty kha 🍓🥤, aaram kar aur khud pe thoda pyaar barsa 🌷🫶. Main koi magician nahi jo saari tension gayab kar doon, par main chahta hoon ki tujhe yaad rahe: tu important hai, teri feelings important hain, aur tu support deserve karti hai. Aur haan, Kandali ke khet mein kudna abhi baaki hai 😭🤣🌿. Tu akeli nahi hai, meri bachchi. Take care, okay? 🥹🫂💖</p>
+</div>
+<div class="sceneart">♡ ✨ 🌙 ✨ ♡</div><div class="actions"><button class="btn" onclick="restart()">Replay Our Little World ✨</button><button class="btn alt" onclick="go(4)">Games phir se? 🎮</button></div>
+</section>
+</main>
+<footer>Made with care, extra emojis, silly jokes & moonlight for my Puchku Don 🌙💗😂</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);let current=1,toastTimer;
+function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2300)}
+window.go=n=>{if(!Number.isInteger(n)||n<1||n>5)return;current=n;document.querySelectorAll('.page').forEach((p,i)=>{p.hidden=i!==n-1;if(i===n-1){p.style.animation='none';void p.offsetWidth;p.style.animation=''}});window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});};
+window.restart=()=>{go(1);$('playArea').innerHTML='<p>☁️ <strong>Choose a game above</strong></p><p>Jo mann kare, usse start kar. Yahan tera game appear hoga.</p>';};
+const area=$('playArea');
+const nice=['🌷 Teri kindness ek beautiful quality hai.','✨ Teri apni sparkle hai—kisi ki copy banne ki zaroorat nahi.','🦋 Dheere chalna bhi progress hai.','💗 Teri feelings important hain, rest lena bhi okay hai.','🐣 Aaj tu thodi extra peace aur cuteness deserve karti hai!','🌙 Tujhe apni pace par chalne ka poora haq hai.'];
+const gifts=['🎁 Surprise! Aaj apne liye ek chhoti si achhi cheez karna.','🧸 Virtual cozy teddy delivery—soft hugs energy, no batteries needed.','🌈 Tiny mission: apna favourite song sunna aur khud ko credit dena.','🍓 Sweet reminder: little joys count too.','🌙 Moon-mail: one step at a time is still moving forward.'];
+const riddles=[{q:'Main raat ko aasman mein chamakta hoon, kabhi aadha kabhi poora dikhta hoon. Main kaun?',a:['Chaand','Badal','Suraj'],ok:0,h:'Raat ka friendly glow socho 🌙'},{q:'Mere paas keys hain, par main lock nahi kholta. Main kya hoon?',a:['Chabi ka ring','Piano','Darwaza'],ok:1,h:'Is par music bajta hai 🎹'},{q:'Jitna zyada mujhe share karo, utni zyada khushi badhti hai. Main kya hoon?',a:['Smile','Homework','Alarm'],ok:0,h:'Face par aati hai 😊'}];
+const words=[{scr:'N O O M',ans:'MOON'},{scr:'R A E H T',ans:'HEART'},{scr:'T S R A',ans:'STAR'},{scr:'W L O F E R',ans:'FLOWER'}];
+window.playGame=type=>{
+ // Every visible game card is explicitly connected here; this was the cause of the dead taps.
+ if(type==='memory')memoryGame();
+ else if(type==='puzzle')puzzleGame();
+ else if(type==='tictactoe')ticTacToeGame();
+ else if(type==='cloudpop')cloudPopGame();
+ else if(type==='rps')rpsGame();
+ else if(type==='kandali')kandaliGame();
+ else toast('Oops! Is game ko dobara tap kar, Puchku 💗');
+};
+function memoryGame(){let icons=['🌙','🌷','💗','⭐','🦋','🎁','🌙','🌷','💗','⭐','🦋','🎁'];icons.sort(()=>Math.random()-.5);let first=null,lock=false,matches=0;area.innerHTML='<h3>Memory Match 🧠</h3><p>Same icons ke pairs match karo.</p><div class="tiles" id="tiles"></div><p id="memStatus">Pairs: 0 / 6</p>';const grid=$('tiles');icons.forEach((v,i)=>{let b=document.createElement('button');b.className='tile';b.textContent='?';b.dataset.v=v;b.dataset.i=i;b.onclick=()=>{if(lock||b.disabled||b===first)return;b.textContent=v;b.classList.add('selected');if(!first){first=b;return}lock=true;if(first.dataset.v===b.dataset.v){first.disabled=b.disabled=true;first.classList.add('matched');b.classList.add('matched');matches++;$('memStatus').textContent='Pairs: '+matches+' / 6';first=null;lock=false;if(matches===6)$('memStatus').textContent='All pairs mil gaye! You did it 💗'}else{const prev=first;first=null;setTimeout(()=>{if(!prev.isConnected||!b.isConnected)return;prev.textContent=b.textContent='?';prev.classList.remove('selected');b.classList.remove('selected');lock=false},650)}};grid.appendChild(b)});}
+function puzzleGame(){let nums=[1,2,3,4,5,6,7,8,0];do{nums.sort(()=>Math.random()-.5)}while(!solvable(nums)||nums.join('')==='123456780');area.innerHTML='<h3>Number Puzzle 🧩</h3><p>Blank jagah ke paas wali tile tap karke 1–8 order banao.</p><div class="tiles" id="puzzleTiles" style="grid-template-columns:repeat(3,minmax(0,1fr))"></div><p id="puzStatus">Chhote steps, no rush ✨</p><button class="btn alt" id="shuffleAgain">Shuffle again</button>';const draw=()=>{const g=$('puzzleTiles');g.innerHTML='';nums.forEach((n,i)=>{let b=document.createElement('button');b.className='tile';b.textContent=n||'·';b.disabled=n===0;b.onclick=()=>{let z=nums.indexOf(0);if(Math.abs(Math.floor(i/3)-Math.floor(z/3))+Math.abs(i%3-z%3)===1){[nums[i],nums[z]]=[nums[z],nums[i]];draw();if(nums.join('')==='123456780')$('puzStatus').textContent='Puzzle solved! Proud of you 🥳'}};g.appendChild(b)})};draw();$('shuffleAgain').onclick=puzzleGame;}
+function solvable(a){let inv=0;for(let i=0;i<a.length;i++)for(let j=i+1;j<a.length;j++)if(a[i]&&a[j]&&a[i]>a[j])inv++;return inv%2===0}
+function riddleGame(){let idx=0;function show(){let r=riddles[idx];area.innerHTML='<h3>Cute Riddles 🌙</h3><p>Riddle '+(idx+1)+' / '+riddles.length+'</p><p>'+r.q+'</p><div class="riddleopts">'+r.a.map((a,i)=>'<button class="opt" data-i="'+i+'">'+a+'</button>').join('')+'</div><p id="riddleHint" class="gold"></p>';area.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{$('riddleHint').textContent=Number(b.dataset.i)===r.ok?'Bilkul sahi! ✨ '+(idx<riddles.length-1?'Next riddle ready hai.':'Saari riddles complete! 🥳'): 'Almost! Hint: '+r.h; if(Number(b.dataset.i)===r.ok){area.querySelectorAll('.opt').forEach(x=>x.disabled=true);if(idx<riddles.length-1){let n=document.createElement('button');n.className='btn';n.textContent='Next riddle →';n.onclick=()=>{idx++;show()};area.appendChild(n)}}});}show();}
+function sequenceGame(){let seq=[],input=[],level=3;area.innerHTML='<h3>Remember the Stars ✨</h3><p>Sequence yaad karo, phir same order mein tap karo.</p><div class="memory-says" id="seqMsg">Ready?</div><div class="sequence" id="seqBtns"></div><button class="btn" id="seqStart">Show sequence</button>';const symbols=['🌙','⭐','💗','🌷'];const btns=$('seqBtns');symbols.forEach((s,i)=>{let b=document.createElement('button');b.textContent=s;b.onclick=()=>{if(!seq.length)return;input.push(i);if(input[input.length-1]!==seq[input.length-1]){$('seqMsg').textContent='Koi baat nahi! Try again 💗';seq=[];return}if(input.length===seq.length){$('seqMsg').textContent='Perfect! Next sequence ✨';seq=[];level=Math.min(6,level+1);$('seqStart').textContent='Level '+level+' — play again';}};btns.appendChild(b)});$('seqStart').onclick=()=>{seq=Array.from({length:level},()=>Math.floor(Math.random()*4));input=[];$('seqMsg').textContent=seq.map(i=>symbols[i]).join('  ');setTimeout(()=>{$('seqMsg').textContent='Ab repeat karo!';},1100+level*200)};}
+function heartGame(){let score=0;area.innerHTML='<h3>Catch the Hearts 💖</h3><p>Saare 10 hearts tap karke collect karo!</p><div class="quizopts" id="heartBtns"></div><p id="heartScore">Caught: 0 / 10</p>';const g=$('heartBtns');['💖','💗','💕','💘','💝','❤️','🩷','💓','💞','💟'].sort(()=>Math.random()-.5).forEach(h=>{let b=document.createElement('button');b.className='opt';b.style.fontSize='1.5rem';b.textContent=h;b.onclick=()=>{if(b.disabled)return;b.disabled=true;b.style.opacity='.3';score++;$('heartScore').textContent=score===10?'All hearts collected! Champion! 🥳':'Caught: '+score+' / 10'};g.appendChild(b)});}
+function giftGame(){area.innerHTML='<h3>Mystery Gift 🎁</h3><p>Gift ko tap karke apna tiny surprise kholo.</p><button id="giftOpen" class="gift" style="font-size:4rem;background:none;border:0">🎁</button><p id="giftMsg">Tap to open ✨</p>'; $('giftOpen').onclick=()=>{$('giftMsg').textContent=gifts[Math.floor(Math.random()*gifts.length)];$('giftOpen').textContent='💝';};}
+function wordGame(){let idx=0;function show(){let w=words[idx];area.innerHTML='<h3>Word Scramble 🔤</h3><p>Letters ko arrange karke sahi word type karo.</p><div class="pullquote">'+w.scr+'</div><input id="wordInput" aria-label="Your word" placeholder="Type your answer" style="max-width:250px;width:100%;padding:12px;border-radius:12px;border:1px solid #fff4;background:#fff1;color:white;font:inherit;text-align:center;text-transform:uppercase"><div class="actions"><button class="btn" id="wordCheck">Check ✨</button></div><p id="wordMsg"></p>'; $('wordCheck').onclick=()=>{if($('wordInput').value.trim().toUpperCase().replace(/\\s/g,'')===w.ans){$('wordMsg').textContent='Correct! Well done 💗';if(idx<words.length-1){let b=document.createElement('button');b.className='btn alt';b.textContent='Next word →';b.onclick=()=>{idx++;show()};area.appendChild(b)}else $('wordMsg').textContent='All words solved! Word wizard 🥳'}else $('wordMsg').textContent='Try again, no rush 🌷'};}show();}
+function cardGame(){area.innerHTML='<h3>Pick a Little Card 🌷</h3><p>Choose any card—there is no wrong choice.</p><div class="quizopts">'+['🌷','🌙','🦋','☁️'].map((e,i)=>'<button class="opt" data-i="'+i+'" style="font-size:1.8rem;padding:15px 19px">'+e+'</button>').join('')+'</div><p id="cardMsg">A little note is waiting...</p>';area.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{$('cardMsg').textContent=nice[Math.floor(Math.random()*nice.length)];});}
+
+
+function ticTacToeGame(){
+ let board=Array(9).fill(''),over=false;
+ area.innerHTML='<h3>Puchku vs Don ⭕❌</h3><p>Tu 💗, computer 🌙. Teen line bana—dekhein asli Don kaun hai 😂</p><div id="ttt" class="tiles" style="grid-template-columns:repeat(3,minmax(0,1fr));max-width:300px"></div><p id="tttMsg">Teri baari, Puchku! 💗</p><button class="btn alt" id="tttAgain">Rematch 😤</button>';
+ const grid=$('ttt'),msg=$('tttMsg');
+ const wins=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+ function winner(){for(const line of wins){if(board[line[0]]&&board[line[0]]===board[line[1]]&&board[line[1]]===board[line[2]])return board[line[0]];}return board.every(Boolean)?'draw':null;}
+ function draw(){grid.innerHTML='';board.forEach((v,i)=>{const b=document.createElement('button');b.className='tile';b.style.minHeight='68px';b.textContent=v||'·';b.onclick=()=>move(i);grid.appendChild(b);});}
+ function finish(w){over=true;msg.textContent=w==='💗'?'Puchku Don jeet gayi!! 😭👑🎉':w==='🌙'?'Ohooo Don jeet gaya 😤😂 Rematch!':'Draw! Dono nautanki barabar 🤝🤣';}
+ function move(i){
+  if(over||board[i])return;board[i]='💗';draw();let w=winner();if(w){finish(w);return;}
+  msg.textContent='Don soch raha hai… 🤔';
+  setTimeout(()=>{if(over)return;const empty=board.map((v,k)=>v?null:k).filter(v=>v!==null);let pick=empty.find(k=>{board[k]='🌙';const win=winner()==='🌙';board[k]='';return win;});if(pick===undefined)pick=empty.find(k=>{board[k]='💗';const block=winner()==='💗';board[k]='';return block;});if(pick===undefined)pick=empty[Math.floor(Math.random()*empty.length)];board[pick]='🌙';draw();w=winner();if(w)finish(w);else msg.textContent='Teri baari, Puchku! 💗';},320);
+ }
+ $('tttAgain').onclick=ticTacToeGame;draw();
+}
+let cloudTimer=null;
+function cloudPopGame(){
+ if(cloudTimer)clearInterval(cloudTimer);let score=0,left=20,tick=null;
+ area.innerHTML='<h3>Cloud Pop ⚡☁️</h3><p>20 seconds mein jitne clouds tap kar sakti hai kar! Ready, speed queen? 😤💗</p><p id="cloudTime">Time: 20s</p><p id="cloudScore">Clouds popped: 0 ☁️</p><div id="cloudPad" class="quizopts"><button class="btn" id="cloudGo">START! 🚀</button></div>';
+ const pad=$('cloudPad'),time=$('cloudTime'),sc=$('cloudScore');
+ $('cloudGo').onclick=()=>{
+  score=0;left=20;pad.innerHTML='';
+  function spawn(){pad.innerHTML='';const b=document.createElement('button');b.className='opt';b.style.fontSize='2.2rem';b.style.padding='14px 24px';b.textContent=['☁️','🌥️','🌈','🦋','⭐'][Math.floor(Math.random()*5)];b.onclick=()=>{if(left<=0)return;score++;sc.textContent='Clouds popped: '+score+' ✨';spawn();};pad.appendChild(b);}
+  spawn();tick=setInterval(()=>{left--;time.textContent='Time: '+left+'s ⏳';if(left<=0){clearInterval(tick);cloudTimer=null;pad.innerHTML='<p>Time up! 🎉</p><button class="btn" id="cloudAgain">Again, Don! 😤</button>';sc.textContent='Final score: '+score+' — '+(score>=20?'Speed wali Puchkuuu! ⚡👑':'Good try, bachchi! 💗');$('cloudAgain').onclick=cloudPopGame;}},1000);
+ };
+}
+function rpsGame(){
+ let round=0,you=0,bot=0,done=false;
+ area.innerHTML='<h3>Rock Paper Scissors ✊✋✌️</h3><p>Best of 5! Choose kar aur Don ko hara 😤😂</p><p id="rpsScore">Tu: 0 💗 | Don: 0 🌙 | Round: 0/5</p><div class="quizopts" id="rpsBtns"></div><p id="rpsMsg">Choose your weapon, Puchku! ⚔️</p><button class="btn alt" id="rpsAgain">Rematch 🔁</button>';
+ const btns=$('rpsBtns'),score=$('rpsScore'),msg=$('rpsMsg'),opts=[['✊','Rock'],['✋','Paper'],['✌️','Scissors']];
+ function draw(){btns.innerHTML='';opts.forEach(([e,n],i)=>{const b=document.createElement('button');b.className='opt';b.style.fontSize='1.55rem';b.innerHTML=e+'<br><small>'+n+'</small>';b.onclick=()=>play(i);btns.appendChild(b);});}
+ function play(i){
+  if(done)return;const j=Math.floor(Math.random()*3);round++;
+  let result=i===j?'Tie! 🤝':((i-j+3)%3===1?'Puchku wins this round! 💗':'Don wins this round 😤');
+  if(i!==j){if((i-j+3)%3===1)you++;else bot++;}
+  msg.textContent='Tu: '+opts[i][0]+' — Don: '+opts[j][0]+' | '+result;
+  score.textContent='Tu: '+you+' 💗 | Don: '+bot+' 🌙 | Round: '+round+'/5';
+  if(round===5){done=true;msg.textContent+=' '+(you>bot?'MATCH JEET GAYI, QUEENNN 👑🥳':you<bot?'Don jeet gaya… suspicious luck 😂':'Draw! Dono equal pagal 🤣');}
+ }
+ draw();$('rpsAgain').onclick=rpsGame;
+}
+function kandaliGame(){
+ area.innerHTML='<h3>Kandali Khet Adventure 🌿😭😂</h3><p>Mission: hum dono Kandali ke khet ke paas pahunch gaye… ab kya karein, Puchku Don? 🏃‍♀️🏃‍♂️</p><div class="sceneart">🌿🌿🐒🌿🌿</div><p id="kandaliStory">Choose your adventure, madam ji 👑</p><div class="quizopts" id="kandaliOpts"></div>';
+ const story=$('kandaliStory'),opts=$('kandaliOpts');
+ function choices(items){opts.innerHTML='';items.forEach(item=>{const b=document.createElement('button');b.className='opt';b.textContent=item.label;b.onclick=item.action;opts.appendChild(b);});}
+ function ending(t){story.textContent=t;choices([{label:'🔁 Phir se khel',action:kandaliGame},{label:'💗 Yay!',action:()=>{story.textContent+=' Aur haan, real life mein safe rehna, Puchku! 🫶🌷';opts.innerHTML='';}}]);}
+ choices([
+  {label:'🏃‍♀️ Seedha khet mein jump!',action:()=>{story.textContent='DHADAAMMM 😭🤣 Don ka chappal ud gaya aur Puchku has-has ke double! 😂🌿';choices([{label:'😂 Phir se try',action:kandaliGame},{label:'🏠 Ghar chalo, bhook lagi',action:()=>ending('Mission over: pehle snacks, phir adventure 🍟🥤💗')}]);}},
+  {label:'🕵️ Pehle secret plan banayein',action:()=>{story.textContent='Plan: 1) hero pose 😎 2) dramatic entry 🎬 3) dono bolenge “humse na ho payega” 🤣';choices([{label:'🎬 Dramatic entry!',action:()=>ending('Entry itni dramatic thi ki khet ke paas wali titli bhi taali bajane lagi 🦋👏😂')},{label:'🌷 Safe side se chalte hain',action:()=>ending('Smart choice! Don aur Puchku safely ghoom ke aaye, phir samose khaye 😭😂🥟')}]);}},
+  {label:'🥟 Pehle samose khayein',action:()=>ending('Puchku ne 2 samose kha liye aur Don ka hissa bhi le liya 😭🤣 Mission successful!')}
+ ]);
+}
+const audio=$('bgAudio');
+ const musicBtn=$('musicBtn');
+ window.toggleMusic=async()=>{
+   try{
+     if(audio.paused){audio.muted=false;await audio.play();musicBtn.textContent='⏸️ Music roko 💗';musicStarted=true;}
+     else{audio.pause();musicBtn.textContent='▶️ Music chalao 💗';}
+   }catch(e){musicBtn.textContent='Tap karke phir try karo 🎵';}
+ };
+ audio.addEventListener('play',()=>{musicBtn.textContent='⏸️ Music roko 💗';});
+ audio.addEventListener('pause',()=>{musicBtn.textContent='▶️ Music chalao 💗';});
+ // Start immediately, then retry on the first natural touch/click/key. Phones may block
+ // audible autoplay until a user gesture; no webpage can override that browser restriction.
+ let musicStarted=false;
+ async function startMusic(){
+   try {
+     audio.loop=true;
+     audio.muted=false;
+     const result=audio.play();
+     if(result && typeof result.then==='function') await result;
+     musicStarted=true;
+   } catch (e) { /* The first real interaction below retries without showing an ON/OFF control. */ }
+ }
+ window.addEventListener('load',startMusic);
+ document.addEventListener('DOMContentLoaded',startMusic);
+ const firstGesture=()=>{if(!musicStarted)startMusic();};
+ document.addEventListener('pointerdown',firstGesture,{passive:true});
+ document.addEventListener('touchend',firstGesture,{passive:true});
+ document.addEventListener('keydown',firstGesture);
+ window.addEventListener('pageshow',()=>{if(!musicStarted)startMusic()});
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden && !musicStarted)startMusic()});
+ const canvas=$('sky'),ctx=canvas.getContext('2d');let w=0,h=0,stars=[],raf=0,visible=!document.hidden;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function resize(){const dpr=Math.min(devicePixelRatio||1,1.5);w=innerWidth;h=innerHeight;canvas.width=Math.floor(w*dpr);canvas.height=Math.floor(h*dpr);canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);stars=Array.from({length:Math.min(120,Math.floor(w*h/9500))},()=>({x:Math.random()*w,y:Math.random()*h,r:.4+Math.random()*1.4,a:.2+Math.random()*.7,p:Math.random()*6,v:.003+Math.random()*.008}));}
+function draw(){if(!visible)return;ctx.clearRect(0,0,w,h);for(const s of stars){s.p+=s.v;ctx.globalAlpha=s.a*(.65+.35*Math.sin(s.p));ctx.fillStyle='#fff0c8';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill()}ctx.globalAlpha=1;if(!reduced)raf=requestAnimationFrame(draw)}
+function start(){cancelAnimationFrame(raf);if(visible)draw()}addEventListener('resize',()=>{resize();start()},{passive:true});document.addEventListener('visibilitychange',()=>{visible=!document.hidden;if(visible)start();else cancelAnimationFrame(raf)});resize();if(!reduced)start();else draw();
+})();
+</script>
+</body>
+</html>
